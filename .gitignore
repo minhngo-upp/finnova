@@ -1,3 +1,5 @@
 .superpowers/
 *.log
 .vercel/
+
+.vercel
