@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LươngNgay - Earned Wage Access</title>
+    
+    <!-- Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Parallax Background Layers -->
+    <div class="parallax-bg layer-deep">
+        <div class="floating-icon">💰</div>
+        <div class="floating-icon">🪪</div>
+        <div class="floating-icon">📄</div>
+        <div class="floating-icon">💳</div>
+    </div>
+    
+    <!-- Flash Overlay for Chapter 2 -->
+    <div class="flash-overlay"></div>
+
+    <div class="industrial-backdrop" aria-hidden="true">
+        <div class="backdrop-grid"></div>
+        <div class="payroll-beam beam-one"></div>
+        <div class="payroll-beam beam-two"></div>
+        <div class="cursor-spotlight"></div>
+    </div>
+
+    <header class="header">
+        <div class="logo">LươngNgay</div>
+        <nav class="nav">
+            <a href="#ch1">Bối cảnh</a>
+            <a href="#ch2">Vấn đề</a>
+            <a href="#ch3">Giải pháp</a>
+            <a href="#ch-usp">Khác biệt</a>
+            <a href="#ch4">Công nghệ</a>
+            <a href="#ch-biz">Kinh doanh</a>
+            <a href="#ch-gtm">GTM</a>
+            <a href="#ch5">Tác động</a>
+        </nav>
+        <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <!-- Chương 1: Bối cảnh Vĩ mô -->
+        <section class="ch1-landscape" id="ch1">
+            <div class="content-wrapper">
+                <div class="text-mask">
+                    <h2 class="stagger-item subtitle-light">Financial Inclusion × F88</h2>
+                </div>
+                <div class="text-mask">
+                    <h1 class="stagger-item title-huge">Nhận lương<br>đã làm.</h1>
+                </div>
+                <div class="text-mask">
+                    <p class="stagger-item subtitle-light mt-4">18.2 Triệu công nhân nhà máy tại Việt Nam.<br>Không lãi suất · Không thế chấp · Giải ngân 2 giờ</p>
+                </div>
+                <div class="hero-metrics">
+                    <div class="hero-metric">
+                        <span>0%</span>
+                        <small>Lãi suất</small>
+                    </div>
+                    <div class="hero-metric">
+                        <span>15.000đ</span>
+                        <small>Phí cố định</small>
+                    </div>
+                    <div class="hero-metric">
+                        <span>2 giờ</span>
+                        <small>Giải ngân</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div class="industrial-skyline" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="payday-orbit" aria-hidden="true"></div>
+                <svg viewBox="0 0 400 800" class="vn-map">
+                    <path d="M150,50 Q200,150 180,300 T200,500 T150,700 Q100,750 120,650 T80,450 T100,200 Z" fill="none" stroke="#E4E4E7" stroke-width="2"/>
+                    <circle cx="150" cy="680" r="4" class="map-node node-hcm" />
+                    <circle cx="180" cy="650" r="4" class="map-node node-dongnai" />
+                    <circle cx="170" cy="500" r="4" class="map-node node-danang" />
+                    <circle cx="150" cy="250" r="4" class="map-node node-hanoi" />
+                    <circle cx="170" cy="200" r="4" class="map-node node-bacgiang" />
+                </svg>
+                <div class="zoom-target">
+                    <div class="factory-icon">🏭</div>
+                    <div class="factory-caption">Trust Point gần KCN</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chương 2: Vấn đề -->
+        <section class="ch2-painpoints" id="ch2">
+            <div class="content-wrapper ch2-content text-center">
+                <div class="text-mask">
+                    <h2 class="stagger-item ch2-title">Khủng hoảng tiền mặt</h2>
+                </div>
+                <div class="text-mask">
+                    <p class="stagger-item ch2-desc">Nhận lương 1 lần/tháng, chi tiêu xảy ra mỗi ngày.</p>
+                    <p class="stagger-item ch2-desc mt-4" style="font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 1rem auto 0;">Năm 2026, chi phí sinh hoạt tại các KCN tăng ~15-20%. "Nỗi đau" tài chính của công nhân ngày càng lớn, nhu cầu EWA cấp thiết hơn bao giờ hết.</p>
+                </div>
+                
+                <div class="cards-3d-container stagger-item mt-8">
+                    <div class="card-3d pain-card">
+                        <div class="card-inner">
+                            <span class="icon-bounce">💸</span>
+                            <h3>Chi tiêu bất ngờ</h3>
+                            <p>Con ốm, tai nạn, học phí giữa tháng không có tiền xử lý.</p>
+                        </div>
+                    </div>
+                    <div class="card-3d danger-card">
+                        <div class="card-inner">
+                            <h3>Tín dụng đen</h3>
+                            <div class="vibrating-number"><span id="bad-credit-counter">0</span>%</div>
+                            <p>Lãi suất vay nóng 30-50%/tháng. Không có lựa chọn khác.</p>
+                        </div>
+                    </div>
+                    <div class="card-3d pain-card">
+                        <div class="card-inner">
+                            <span class="icon-bounce">🏦</span>
+                            <h3>Bị từ chối tín dụng</h3>
+                            <p>Không sao kê, không tài sản thế chấp truyền thống.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chương 3: Giải pháp Vi mô & Thị trường -->
+        <section class="ch3-solution" id="ch3">
+            <div class="sweep-light"></div>
+            
+            <div class="content-wrapper split-layout">
+                <div class="text-content">
+                    <div class="text-mask">
+                        <h2 class="stagger-item">Giải pháp EWA</h2>
+                    </div>
+                    <div class="text-mask">
+                        <p class="stagger-item light-desc">Không phải vay tiền — là nhận lương mình đã làm ra.</p>
+                    </div>
+                    
+                    <div class="steps-container stagger-item mt-4">
+                        <div class="step-item">
+                            <div class="step-num">1</div>
+                            <div class="step-text">
+                                <h4>Làm việc</h4>
+                                <p>Hệ thống tự động tính lương tích luỹ qua API.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">2</div>
+                            <div class="step-text">
+                                <h4>Chọn rút</h4>
+                                <p>Mở app, chọn số tiền (tối đa 50%). 1 chạm.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">3</div>
+                            <div class="step-text">
+                                <h4>Nhận tiền</h4>
+                                <p>Giải ngân trong 2 giờ qua ví điện tử.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-num">4</div>
+                            <div class="step-text">
+                                <h4>Cuối tháng</h4>
+                                <p>Tự động khấu trừ, phí cố định 15.000đ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interactive-phone stagger-item">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="screen-scanline"></div>
+                            <div class="app-header">LươngNgay</div>
+                            <div class="earned-ring">
+                                <span>50%</span>
+                            </div>
+                            <div class="app-balance">2.500.000đ</div>
+                            <div class="app-label">Lương tích luỹ</div>
+                            <div class="wage-ledger">
+                                <span>Ngày công đã xác thực</span>
+                                <strong>18 / 30</strong>
+                            </div>
+                            <button class="interactive-btn" id="withdraw-btn">Rút lương ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CH-USP: Khác biệt -->
+        <section class="ch-usp" id="ch-usp">
+            <div class="content-wrapper text-center">
+                <div class="text-mask">
+                    <h2 class="stagger-item">Tại sao LươngNgay khác biệt?</h2>
+                </div>
+                <div class="text-mask">
+                    <p class="stagger-item subtitle-light">Unique Selling Points</p>
+                </div>
+                
+                <div class="usp-grid stagger-item mt-8">
+                    <div class="usp-item glass-panel">
+                        <div class="usp-icon">💎</div>
+                        <h3>Không lãi suất</h3>
+                        <p>15.000đ/lần. Rẻ hơn 95% tín dụng đen. Không phí ẩn.</p>
+                    </div>
+                    <div class="usp-item glass-panel">
+                        <div class="usp-icon">🛡️</div>
+                        <h3>Không tài sản</h3>
+                        <p>Chỉ cần CCCD + xác thực qua nhà máy.</p>
+                    </div>
+                    <div class="usp-item glass-panel">
+                        <div class="usp-icon">⚡</div>
+                        <h3>2 Giờ giải ngân</h3>
+                        <p>Tiền vào MoMo/ZaloPay nhanh nhất thị trường.</p>
+                    </div>
+                    <div class="usp-item glass-panel">
+                        <div class="usp-icon">🏪</div>
+                        <h3>Mô hình "Phygital"</h3>
+                        <p>950+ điểm offline (cuối 2025). Cửa hàng làm Trust Point, hỗ trợ eKYC trực tiếp cho công nhân không rành công nghệ.</p>
+                    </div>
+                    <div class="usp-item glass-panel">
+                        <div class="usp-icon">🏥</div>
+                        <h3>Embedded Finance</h3>
+                        <p>Bảo hiểm nhúng trực tiếp. Mua bảo hiểm tai nạn Bảo Minh/PVI chỉ với 1-tap ngay trong luồng rút lương.</p>
+                    </div>
+                    <div class="usp-item glass-panel">
+                        <div class="usp-icon">🧠</div>
+                        <h3>Labor Behavior Scoring</h3>
+                        <p>Dữ liệu độc quyền từ HRM: tần suất đi làm, tăng ca, thâm niên. Giúp dự báo khả năng trả nợ chính xác bằng AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chương 4: Công nghệ & Niềm tin -->
+        <section class="ch4-engine" id="ch4">
+            <div class="content-wrapper text-center">
+                <div class="text-mask">
+                    <h2 class="stagger-item">Hệ sinh thái Công nghệ</h2>
+                </div>
+                
+                <div class="exploded-view-container stagger-item">
+                    <div class="tech-details left-details">
+                        <div class="tech-box">
+                            <h4>Lớp 3: Hào sâu</h4>
+                            <p>Gamification Tiết kiệm, Bảo hiểm nhúng, Open Banking Credit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exploded-scene">
+                        <div class="engine-layer layer-api">
+                            <div class="layer-content">
+                                <span>API (HRM, Disbursement)</span>
+                                <div class="mini-data-lines"></div>
+                            </div>
+                        </div>
+                        <div class="engine-layer layer-ai">
+                            <div class="layer-content dark-block">
+                                <span>AI Labor Behavior Scoring</span>
+                                <div class="pulse-dot"></div>
+                            </div>
+                        </div>
+                        <div class="engine-layer layer-physical">
+                            <div class="layer-content">
+                                <span>Lớp Vật lý (950+ Cửa hàng)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-details right-details">
+                        <div class="tech-box">
+                            <h4>Lớp 1 & 2</h4>
+                            <p>Realtime API, eKYC FPT, Instant Transfer, Smart Push.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CH-BIZ: Mô hình kinh doanh -->
+        <section class="ch-biz" id="ch-biz">
+            <div class="content-wrapper">
+                <div class="text-mask text-center">
+                    <h2 class="stagger-item">Chiến lược Phễu & Mô hình Kinh doanh</h2>
+                </div>
+                <div class="text-mask text-center mt-4">
+                    <p class="stagger-item subtitle-light">EWA là "Đầu phễu thu hút khách hàng" (CAC thấp), mục tiêu chuyển đổi sang các sản phẩm biên lợi nhuận cao.</p>
+                </div>
+                
+                <div class="biz-diagram stagger-item mt-8">
+                    <div class="biz-node">
+                        <h4>Công nhân</h4>
+                        <p>Rút lương bất kỳ lúc nào</p>
+                    </div>
+                    <div class="biz-arrow">↔️</div>
+                    <div class="biz-node center-node">
+                        <h4>F88 Platform</h4>
+                        <p>EWA Engine + App</p>
+                    </div>
+                    <div class="biz-arrow">↔️</div>
+                    <div class="biz-node">
+                        <h4>Nhà máy</h4>
+                        <p>Escrow 2-3% quỹ lương</p>
+                    </div>
+                </div>
+                
+                <div class="rev-streams stagger-item mt-8">
+                    <div class="rev-card">
+                        <h3>Giao dịch EWA (Đầu phễu)</h3>
+                        <p>15.000đ/lần. Khách hàng sử dụng thường xuyên, giữ chân người dùng.</p>
+                        <div class="rev-val">CAC cực thấp</div>
+                    </div>
+                    <div class="rev-card">
+                        <h3>Cross-sell & Upsell</h3>
+                        <p>Chuyển đổi sang Bảo hiểm vi mô, Tiết kiệm, Vay tiêu dùng chính thống.</p>
+                        <div class="rev-val">Biên lợi nhuận cao</div>
+                    </div>
+                    <div class="rev-card">
+                        <h3>SaaS Fee (Năm 2)</h3>
+                        <p>Nhà máy "nghiện" EWA do giảm tỷ lệ nghỉ việc, sẵn sàng trả phí phần mềm duy trì.</p>
+                        <div class="rev-val">Dòng tiền B2B ổn định</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CH-GTM: Go-To-Market -->
+        <section class="ch-gtm" id="ch-gtm">
+            <div class="content-wrapper">
+                <div class="text-mask text-center">
+                    <h2 class="stagger-item">Go-To-Market Roadmap</h2>
+                </div>
+                
+                <div class="timeline stagger-item mt-8">
+                    <div class="time-step">
+                        <div class="time-dot"></div>
+                        <h3>GĐ 1: Pilot & PMF</h3>
+                        <p class="time-dur">Tháng 1-3</p>
+                        <ul>
+                            <li>2.000 MAU</li>
+                            <li>3 Nhà máy Bình Dương</li>
+                            <li>KYC Offline</li>
+                        </ul>
+                    </div>
+                    <div class="time-step">
+                        <div class="time-dot"></div>
+                        <h3>GĐ 2: B2B Scale</h3>
+                        <p class="time-dur">Tháng 4-9</p>
+                        <ul>
+                            <li>20.000 MAU</li>
+                            <li>15 Nhà máy, 4 Tỉnh</li>
+                            <li>Cross-sell Bảo hiểm</li>
+                        </ul>
+                    </div>
+                    <div class="time-step">
+                        <div class="time-dot"></div>
+                        <h3>GĐ 3: Ecosystem</h3>
+                        <p class="time-dur">Tháng 10-12</p>
+                        <ul>
+                            <li>50.000 MAU</li>
+                            <li>Tiết kiệm micro</li>
+                            <li>Mở vay tiêu dùng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chương 5: Tác động & Cam kết -->
+        <section class="ch5-impact" id="ch5">
+            <div class="content-wrapper">
+                <div class="text-mask text-center">
+                    <h2 class="stagger-item">Tác động Xã hội</h2>
+                </div>
+                
+                <div class="charts-container stagger-item mt-8">
+                    <div class="bar-chart-wrapper">
+                        <div class="chart-label">Thoát ly tín dụng đen</div>
+                        <div class="bar-track">
+                            <div class="bar-fill accent-fill" data-height="85%">
+                                <span class="bar-value">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-stats">
+                        <div class="stat-item">
+                            <h3>≥70%</h3>
+                            <p>Công nhân bắt đầu thói quen tiết kiệm micro (50-100k/tháng) sau 6 tháng</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Lịch sử sạch</h3>
+                            <p>Financial Inclusion: Tạo lịch sử tín dụng sạch để vay vốn ngân hàng chính thống</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>-20%</h3>
+                            <p>Giảm tỷ lệ nhảy việc (Turnover) tại các nhà máy đối tác</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bar-chart-wrapper">
+                        <div class="chart-label">Tài khoản NH lần đầu</div>
+                        <div class="bar-track">
+                            <div class="bar-fill" data-height="40%">
+                                <span class="bar-value">+40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CH-RISK: Rủi ro & Khả thi -->
+        <section class="ch-risk" id="ch-risk">
+            <div class="content-wrapper">
+                <div class="text-mask text-center">
+                    <h2 class="stagger-item">Quản trị Rủi ro & Khả thi</h2>
+                </div>
+                
+                <div class="risk-feasibility-split stagger-item mt-8">
+                    <div class="risk-col">
+                        <h3>Kiểm soát rủi ro</h3>
+                        <div class="risk-card">
+                            <h4>Công nhân nghỉ việc (Trung bình)</h4>
+                            <p>Mô hình Escrow: Ký quỹ 2-3% từ quỹ lương nhà máy đảm bảo bad-debt luôn dưới 0.5%.</p>
+                        </div>
+                        <div class="risk-card">
+                            <h4>Pháp lý (Cao)</h4>
+                            <p>Cấu trúc: 'ứng lương bảo lãnh'. Tham gia Sandbox NHNN.</p>
+                        </div>
+                        <div class="risk-card">
+                            <h4>Hệ thống cũ (Trung bình)</h4>
+                            <p>Fall-back upload file. Build connector cho MISA/Base.</p>
+                        </div>
+                    </div>
+                    <div class="feasibility-col">
+                        <h3>Lợi thế cạnh tranh & Khả thi</h3>
+                        <div class="f-item">
+                            <strong>Giáo dục thị trường:</strong> Gimo, Vui App, Ekko đã tiên phong, nhưng gặp khó khăn lớn trong việc tiếp cận offline – nơi F88 làm chủ.
+                        </div>
+                        <div class="f-item">
+                            <strong>🇮🇩 GajiGesa:</strong> 2M+ công nhân, giảm 15-25% turnover.
+                        </div>
+                        <div class="f-item">
+                            <strong>🇬🇧 Wagestream:</strong> Bad debt <0.5% nhờ mô hình escrow.
+                        </div>
+                        <div class="f-item highlight">
+                            <strong>Tại sao F88 thống lĩnh?</strong> 950+ cửa hàng (cuối 2025) khẳng định quy mô thống lĩnh và khả năng tiếp cận vật lý mà không đối thủ nào theo kịp.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kết thúc -->
+        <section class="outro">
+            <div class="outro-text-container text-center">
+                <div class="text-mask">
+                    <h2 class="outro-slogan">"Không chỉ cung cấp tiền lương sớm —<br>Chúng tôi cung cấp <span style="color: var(--accent-green)">Phẩm giá tài chính</span><br>cho 18 triệu người lao động thầm lặng."</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
