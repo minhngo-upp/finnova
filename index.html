@@ -39,14 +39,10 @@
     <header class="header">
         <div class="logo">LươngNgay</div>
         <nav class="nav">
-            <a href="#ch1">Bối cảnh</a>
-            <a href="#ch2">Vấn đề</a>
-            <a href="#ch3">Giải pháp</a>
-            <a href="#ch-usp">Khác biệt</a>
-            <a href="#ch4">Công nghệ</a>
-            <a href="#ch-biz">Kinh doanh</a>
-            <a href="#ch-gtm">GTM</a>
-            <a href="#ch5">Tác động</a>
+            <a href="#how-it-works">Cách hoạt động</a>
+            <a href="#for-workers">Dành cho công nhân</a>
+            <a href="#for-factories">Dành cho nhà máy</a>
+            <a href="#contact">Liên hệ</a>
         </nav>
         <div class="scroll-progress" aria-hidden="true"></div>
     </header>
@@ -56,10 +52,13 @@
         <section class="ch1-landscape" id="ch1">
             <div class="content-wrapper">
                 <div class="text-mask">
-                    <h2 class="stagger-item subtitle-light">Financial Inclusion × F88</h2>
+                    <h2 class="stagger-item subtitle-light">Tiện ích lương dành cho công nhân — do F88 phát triển</h2>
                 </div>
                 <div class="text-mask">
                     <h1 class="stagger-item title-huge">Nhận lương<br>đã làm.</h1>
+                </div>
+                <div class="text-mask">
+                    <p class="stagger-item hero-emotional">Phẩm giá tài chính cho 18 triệu người lao động thầm lặng của Việt Nam.</p>
                 </div>
                 <div class="text-mask">
                     <p class="stagger-item subtitle-light mt-4">18.2 Triệu công nhân nhà máy tại Việt Nam.<br>Không lãi suất · Không thế chấp · Giải ngân 2 giờ</p>
@@ -77,6 +76,24 @@
                         <span>2 giờ</span>
                         <small>Giải ngân</small>
                     </div>
+                </div>
+                <div class="hero-actions stagger-item">
+                    <button class="btn-primary" type="button" data-toggle-target="hero-signup-form">Đăng ký nhận thông báo sớm</button>
+                    <a class="btn-secondary" href="#for-factories">Đăng ký cho nhà máy →</a>
+                </div>
+                <form class="inline-signup hero-signup" id="hero-signup-form" hidden>
+                    <label for="hero-email">Email nhận thông báo</label>
+                    <div class="form-row">
+                        <input id="hero-email" name="email" type="email" placeholder="ban@email.com" required>
+                        <button type="submit">Đăng ký</button>
+                    </div>
+                    <p class="form-success" role="status" hidden>Cảm ơn bạn. Chúng tôi sẽ gửi thông báo sớm qua email.</p>
+                </form>
+                <div class="trust-bar stagger-item" aria-label="Đối tác phát triển">
+                    <span>Được phát triển bởi:</span>
+                    <strong>F88</strong>
+                    <strong>Bảo Minh</strong>
+                    <strong>PVI</strong>
                 </div>
             </div>
             
@@ -97,6 +114,15 @@
                     <div class="factory-icon">🏭</div>
                     <div class="factory-caption">Trust Point gần KCN</div>
                 </div>
+            </div>
+        </section>
+
+        <section class="context-bridge" id="context-bridge">
+            <div class="content-wrapper">
+                <p class="bridge-quote">
+                    "Mỗi tháng, hàng triệu công nhân rơi vào cùng một bẫy —<br>
+                    lương về cuối tháng, nhưng cuộc sống không chờ đến cuối tháng."
+                </p>
             </div>
         </section>
 
@@ -122,7 +148,7 @@
                     <div class="card-3d danger-card">
                         <div class="card-inner">
                             <h3>Tín dụng đen</h3>
-                            <div class="vibrating-number"><span id="bad-credit-counter">0</span>%</div>
+                            <div class="vibrating-number">30–50%/tháng</div>
                             <p>Lãi suất vay nóng 30-50%/tháng. Không có lựa chọn khác.</p>
                         </div>
                     </div>
@@ -137,8 +163,80 @@
             </div>
         </section>
 
+        <section class="market-research" id="market-research">
+            <div class="content-wrapper">
+                <div class="text-mask text-center">
+                    <h2 class="stagger-item">Thực trạng thị trường — Số liệu không thể bỏ qua</h2>
+                </div>
+
+                <div class="market-metrics stagger-item mt-8">
+                    <div class="metric-card">
+                        <strong>18,2 triệu</strong>
+                        <span>công nhân<br>khu vực SX<br>(GSO 2023)</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>335 KCN</strong>
+                        <span>đang hoạt động<br>toàn quốc<br>(Bộ KH&amp;ĐT 2023)</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>78%</strong>
+                        <span>từng vay nóng<br>≥1 lần/năm<br>(GajiGesa 2022)</span>
+                    </div>
+                </div>
+
+                <div class="cost-grid stagger-item mt-8">
+                    <div class="cost-panel">
+                        <h3>Chi phí với công nhân</h3>
+                        <ul>
+                            <li>Vay 5 triệu từ tín dụng đen, lãi 30%/tháng → sau 6 tháng trả 14,6 triệu</li>
+                            <li>Chi phí sinh hoạt KCN tăng ~15–20% trong 2026 (CPI Vietnam Q1/2026)</li>
+                            <li>1 lần nhập viện không có tiền = mất 2–3 tháng thu nhập tích lũy</li>
+                        </ul>
+                    </div>
+                    <div class="cost-panel">
+                        <h3>Chi phí với nhà máy</h3>
+                        <ul>
+                            <li>Turnover trung bình 25–35%/năm tại KCN dệt may, điện tử</li>
+                            <li>Chi phí thay thế 1 công nhân: ~1,5–2 tháng lương (McKinsey 2022)</li>
+                            <li>Nhà máy 500 người, turnover 30% = tốn ~600–900 triệu đ/năm chỉ để tuyển mới</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="benchmark-grid stagger-item mt-8">
+                    <article class="benchmark-card">
+                        <h3>🇮🇩 GajiGesa (Indonesia)</h3>
+                        <ul>
+                            <li>2M+ công nhân đang dùng EWA</li>
+                            <li>600+ nhà máy đối tác</li>
+                            <li>Turnover giảm 15–25% sau 6 tháng</li>
+                            <li>Raise $8.5M Series A (2022)</li>
+                        </ul>
+                    </article>
+                    <article class="benchmark-card">
+                        <h3>🇵🇭 GCash EWA (Philippines)</h3>
+                        <ul>
+                            <li>3M+ công nhân nhà máy</li>
+                            <li>Chi phí thấp hơn 90% so với vay nóng</li>
+                            <li>Tích hợp trong super app quốc gia</li>
+                        </ul>
+                    </article>
+                    <article class="benchmark-card">
+                        <h3>🇻🇳 Thị trường Việt Nam</h3>
+                        <ul>
+                            <li>Hastia, Gimo, Vui App: đã giáo dục thị trường</li>
+                            <li>Chưa có dominant player</li>
+                            <li>Gap lớn nhất: thiếu kênh offline tiếp cận CN lớn tuổi</li>
+                            <li><strong>→ Cửa sổ cơ hội 12–18 tháng cho F88</strong></li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="section-footnote">Nguồn: Tổng cục Thống kê VN 2023 · Bộ KH&amp;ĐT 2023 · GajiGesa Report 2022 · McKinsey Global Institute 2022 · ILO Vietnam 2022 · CPI Vietnam Q1/2026</p>
+            </div>
+        </section>
+
         <!-- Chương 3: Giải pháp Vi mô & Thị trường -->
-        <section class="ch3-solution" id="ch3">
+        <section class="ch3-solution" id="how-it-works">
             <div class="sweep-light"></div>
             
             <div class="content-wrapper split-layout">
@@ -188,15 +286,23 @@
                             <div class="screen-scanline"></div>
                             <div class="app-header">LươngNgay</div>
                             <div class="earned-ring">
-                                <span>50%</span>
+                                <span id="ewa-percent">50%</span>
                             </div>
-                            <div class="app-balance">2.500.000đ</div>
-                            <div class="app-label">Lương tích luỹ</div>
+                            <div class="app-balance" id="earned-wage">Lương tích lũy: 4.200.000đ</div>
+                            <div class="app-label">Lương tháng: 7.000.000đ</div>
+                            <label class="salary-slider-label" for="days-worked">Số ngày đã làm trong tháng</label>
+                            <input class="salary-slider" id="days-worked" type="range" min="1" max="30" value="18">
                             <div class="wage-ledger">
                                 <span>Ngày công đã xác thực</span>
-                                <strong>18 / 30</strong>
+                                <strong id="days-worked-label">18 / 30</strong>
+                            </div>
+                            <div class="salary-breakdown">
+                                <p><span>Tối đa có thể rút:</span> <strong id="max-ewa">2.100.000đ</strong></p>
+                                <p><span>Phí cố định:</span> <strong id="ewa-fee">15.000đ</strong></p>
+                                <p class="net-row"><span>Bạn nhận được:</span> <strong id="net-received">2.085.000đ</strong></p>
                             </div>
                             <button class="interactive-btn" id="withdraw-btn">Rút lương ngay</button>
+                            <p class="withdraw-toast" id="withdraw-toast" role="status" hidden>✓ Yêu cầu đã gửi! Tiền sẽ về trong 2 giờ.</p>
                         </div>
                     </div>
                 </div>
@@ -204,13 +310,13 @@
         </section>
 
         <!-- CH-USP: Khác biệt -->
-        <section class="ch-usp" id="ch-usp">
+        <section class="ch-usp" id="for-workers">
             <div class="content-wrapper text-center">
                 <div class="text-mask">
-                    <h2 class="stagger-item">Tại sao LươngNgay khác biệt?</h2>
+                    <h2 class="stagger-item">Dành cho công nhân cần tiền đúng lúc</h2>
                 </div>
                 <div class="text-mask">
-                    <p class="stagger-item subtitle-light">Unique Selling Points</p>
+                    <p class="stagger-item subtitle-light">Rút phần lương đã làm, không vay nóng, không thế chấp.</p>
                 </div>
                 
                 <div class="usp-grid stagger-item mt-8">
@@ -252,89 +358,121 @@
         <section class="ch4-engine" id="ch4">
             <div class="content-wrapper text-center">
                 <div class="text-mask">
-                    <h2 class="stagger-item">Hệ sinh thái Công nghệ</h2>
+                    <h2 class="stagger-item">Công nghệ đứng sau trải nghiệm đơn giản</h2>
                 </div>
                 
                 <div class="exploded-view-container stagger-item">
                     <div class="tech-details left-details">
                         <div class="tech-box">
-                            <h4>Lớp 3: Hào sâu</h4>
-                            <p>Gamification Tiết kiệm, Bảo hiểm nhúng, Open Banking Credit.</p>
+                            <h4>Kết nối thông minh</h4>
+                            <p>Hệ thống tự đọc dữ liệu chấm công từ nhà máy — không cần HR làm thêm bất cứ việc gì.</p>
                         </div>
                     </div>
                     
                     <div class="exploded-scene">
                         <div class="engine-layer layer-api">
                             <div class="layer-content">
-                                <span>API (HRM, Disbursement)</span>
+                                <span>Kết nối thông minh</span>
                                 <div class="mini-data-lines"></div>
                             </div>
                         </div>
                         <div class="engine-layer layer-ai">
                             <div class="layer-content dark-block">
-                                <span>AI Labor Behavior Scoring</span>
+                                <span>AI hiểu bạn hơn ngân hàng</span>
                                 <div class="pulse-dot"></div>
                             </div>
                         </div>
                         <div class="engine-layer layer-physical">
                             <div class="layer-content">
-                                <span>Lớp Vật lý (950+ Cửa hàng)</span>
+                                <span>950+ điểm hỗ trợ thực tế</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="tech-details right-details">
                         <div class="tech-box">
-                            <h4>Lớp 1 & 2</h4>
-                            <p>Realtime API, eKYC FPT, Instant Transfer, Smart Push.</p>
+                            <h4>AI hiểu bạn hơn ngân hàng</h4>
+                            <p>Không cần lịch sử tín dụng. AI của chúng tôi đánh giá bạn qua chuyên cần, thâm niên và thói quen — dữ liệu mà ngân hàng truyền thống không có.</p>
                         </div>
                     </div>
+                </div>
+                <div class="tech-support-note stagger-item">
+                    <h4>950+ điểm hỗ trợ thực tế</h4>
+                    <p>Cửa hàng F88 gần mọi KCN — hỗ trợ đăng ký trực tiếp nếu bạn chưa quen dùng app.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="personas" id="who-is-it-for">
+            <div class="content-wrapper">
+                <div class="text-mask text-center">
+                    <h2 class="stagger-item">LươngNgay dành cho bạn nếu...</h2>
+                </div>
+                <div class="persona-grid stagger-item mt-8">
+                    <article class="persona-card">
+                        <div class="avatar-initials">H</div>
+                        <div>
+                            <h3>Hương, 28 tuổi</h3>
+                            <p class="persona-meta">Công nhân may mặc, Bình Dương · Lương 6,5 triệu/tháng</p>
+                            <blockquote>"Con tôi bị sốt giữa tháng, tôi không có tiền đi viện. Vay hụi thì sợ vỡ."</blockquote>
+                            <a href="#contact">Đăng ký ngay →</a>
+                        </div>
+                    </article>
+                    <article class="persona-card">
+                        <div class="avatar-initials">T</div>
+                        <div>
+                            <h3>Thắng, 42 tuổi — HR Manager</h3>
+                            <p class="persona-meta">Nhà máy 800 công nhân, TP.HCM</p>
+                            <blockquote>"Tháng nào cũng có 5–10 người nghỉ giữa chừng vì chuyện tiền bạc cá nhân."</blockquote>
+                            <a href="#for-factories">Đăng ký cho nhà máy →</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- CH-BIZ: Mô hình kinh doanh -->
-        <section class="ch-biz" id="ch-biz">
+        <section class="ch-biz" id="for-factories">
             <div class="content-wrapper">
                 <div class="text-mask text-center">
-                    <h2 class="stagger-item">Chiến lược Phễu & Mô hình Kinh doanh</h2>
+                    <h2 class="stagger-item">Tại sao nhà máy nên hợp tác?</h2>
                 </div>
                 <div class="text-mask text-center mt-4">
-                    <p class="stagger-item subtitle-light">EWA là "Đầu phễu thu hút khách hàng" (CAC thấp), mục tiêu chuyển đổi sang các sản phẩm biên lợi nhuận cao.</p>
+                    <p class="stagger-item subtitle-light">Một phúc lợi tài chính dễ triển khai, giúp HR giữ người mà không phải thay đổi kỳ trả lương.</p>
                 </div>
                 
                 <div class="biz-diagram stagger-item mt-8">
                     <div class="biz-node">
                         <h4>Công nhân</h4>
-                        <p>Rút lương bất kỳ lúc nào</p>
+                        <p>Nhận phần lương đã làm khi cần</p>
                     </div>
-                    <div class="biz-arrow">↔️</div>
+                    <div class="biz-arrow">→</div>
                     <div class="biz-node center-node">
-                        <h4>F88 Platform</h4>
-                        <p>EWA Engine + App</p>
+                        <h4>LươngNgay</h4>
+                        <p>Kết nối chấm công, app và điểm hỗ trợ F88</p>
                     </div>
-                    <div class="biz-arrow">↔️</div>
+                    <div class="biz-arrow">→</div>
                     <div class="biz-node">
                         <h4>Nhà máy</h4>
-                        <p>Escrow 2-3% quỹ lương</p>
+                        <p>Thêm phúc lợi mà không đổi quy trình lương</p>
                     </div>
                 </div>
                 
                 <div class="rev-streams stagger-item mt-8">
                     <div class="rev-card">
-                        <h3>Giao dịch EWA (Đầu phễu)</h3>
-                        <p>15.000đ/lần. Khách hàng sử dụng thường xuyên, giữ chân người dùng.</p>
-                        <div class="rev-val">CAC cực thấp</div>
+                        <h3>Phúc lợi miễn phí</h3>
+                        <p>Không tốn ngân sách triển khai của nhà máy. Công nhân chỉ trả phí cố định khi chủ động rút lương.</p>
+                        <div class="rev-val">0đ</div>
                     </div>
                     <div class="rev-card">
-                        <h3>Cross-sell & Upsell</h3>
-                        <p>Chuyển đổi sang Bảo hiểm vi mô, Tiết kiệm, Vay tiêu dùng chính thống.</p>
-                        <div class="rev-val">Biên lợi nhuận cao</div>
+                        <h3>Giữ người đo được</h3>
+                        <p>Theo dõi tỷ lệ nghỉ việc, nhu cầu ứng lương và phản hồi sau 6 tháng pilot.</p>
+                        <div class="rev-val">-20%</div>
                     </div>
                     <div class="rev-card">
-                        <h3>SaaS Fee (Năm 2)</h3>
-                        <p>Nhà máy "nghiện" EWA do giảm tỷ lệ nghỉ việc, sẵn sàng trả phí phần mềm duy trì.</p>
-                        <div class="rev-val">Dòng tiền B2B ổn định</div>
+                        <h3>Không đảo quy trình</h3>
+                        <p>Không thay đổi ngày trả lương, bảng lương hay hệ thống HRM hiện tại. Có phương án upload file nếu cần.</p>
+                        <div class="rev-val">HR nhẹ việc</div>
                     </div>
                 </div>
             </div>
@@ -344,41 +482,43 @@
         <section class="ch-gtm" id="ch-gtm">
             <div class="content-wrapper">
                 <div class="text-mask text-center">
-                    <h2 class="stagger-item">Go-To-Market Roadmap</h2>
+                    <h2 class="stagger-item">Thông tin triển khai</h2>
                 </div>
-                
-                <div class="timeline stagger-item mt-8">
-                    <div class="time-step">
-                        <div class="time-dot"></div>
-                        <h3>GĐ 1: Pilot & PMF</h3>
-                        <p class="time-dur">Tháng 1-3</p>
-                        <ul>
-                            <li>2.000 MAU</li>
-                            <li>3 Nhà máy Bình Dương</li>
-                            <li>KYC Offline</li>
-                        </ul>
+                <details class="roadmap-toggle stagger-item mt-8">
+                    <summary>Xem thêm về lộ trình triển khai</summary>
+                    <div class="timeline mt-8">
+                        <div class="time-step">
+                            <div class="time-dot"></div>
+                            <h3>GĐ 1: Pilot & PMF</h3>
+                            <p class="time-dur">Tháng 1-3</p>
+                            <ul>
+                                <li>2.000 MAU</li>
+                                <li>3 Nhà máy Bình Dương</li>
+                                <li>KYC Offline</li>
+                            </ul>
+                        </div>
+                        <div class="time-step">
+                            <div class="time-dot"></div>
+                            <h3>GĐ 2: B2B Scale</h3>
+                            <p class="time-dur">Tháng 4-9</p>
+                            <ul>
+                                <li>20.000 MAU</li>
+                                <li>15 Nhà máy, 4 Tỉnh</li>
+                                <li>Cross-sell Bảo hiểm</li>
+                            </ul>
+                        </div>
+                        <div class="time-step">
+                            <div class="time-dot"></div>
+                            <h3>GĐ 3: Ecosystem</h3>
+                            <p class="time-dur">Tháng 10-12</p>
+                            <ul>
+                                <li>50.000 MAU</li>
+                                <li>Tiết kiệm micro</li>
+                                <li>Mở vay tiêu dùng</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="time-step">
-                        <div class="time-dot"></div>
-                        <h3>GĐ 2: B2B Scale</h3>
-                        <p class="time-dur">Tháng 4-9</p>
-                        <ul>
-                            <li>20.000 MAU</li>
-                            <li>15 Nhà máy, 4 Tỉnh</li>
-                            <li>Cross-sell Bảo hiểm</li>
-                        </ul>
-                    </div>
-                    <div class="time-step">
-                        <div class="time-dot"></div>
-                        <h3>GĐ 3: Ecosystem</h3>
-                        <p class="time-dur">Tháng 10-12</p>
-                        <ul>
-                            <li>50.000 MAU</li>
-                            <li>Tiết kiệm micro</li>
-                            <li>Mở vay tiêu dùng</li>
-                        </ul>
-                    </div>
-                </div>
+                </details>
             </div>
         </section>
 
@@ -387,6 +527,7 @@
             <div class="content-wrapper">
                 <div class="text-mask text-center">
                     <h2 class="stagger-item">Tác động Xã hội</h2>
+                    <p class="section-note">* Mục tiêu sau 6 tháng triển khai pilot. Nguồn: GajiGesa Indonesia 2022, McKinsey 2022.</p>
                 </div>
                 
                 <div class="charts-container stagger-item mt-8">
@@ -469,11 +610,12 @@
         </section>
 
         <!-- Kết thúc -->
-        <section class="outro">
+        <section class="outro" id="contact">
             <div class="outro-text-container text-center">
                 <div class="text-mask">
                     <h2 class="outro-slogan">"Không chỉ cung cấp tiền lương sớm —<br>Chúng tôi cung cấp <span style="color: var(--accent-green)">Phẩm giá tài chính</span><br>cho 18 triệu người lao động thầm lặng."</h2>
                 </div>
+                <p class="closing-note">Được phát triển bởi F88 × Bảo Minh × PVI<br>Dự án thuộc chương trình Financial Inclusion 2025–2026</p>
             </div>
         </section>
     </main>

@@ -1,4 +1,32 @@
 // Khởi tạo Lenis Smooth Scroll
+const MONTHLY_SALARY = 7000000;
+const DAYS_IN_MONTH = 30;
+const MAX_EWA_RATIO = 0.5;
+const FIXED_EWA_FEE = 15000;
+
+const formatVnd = (value) => `${Math.round(value).toLocaleString('vi-VN')}đ`;
+
+const calculateEwa = (daysWorked) => {
+    const normalizedDays = Math.min(DAYS_IN_MONTH, Math.max(1, Number(daysWorked) || 1));
+    const earnedWage = (MONTHLY_SALARY / DAYS_IN_MONTH) * normalizedDays;
+    const maxEwa = earnedWage * MAX_EWA_RATIO;
+    const netReceived = Math.max(0, maxEwa - FIXED_EWA_FEE);
+
+    return {
+        daysWorked: normalizedDays,
+        monthlySalary: MONTHLY_SALARY,
+        earnedWage: Math.round(earnedWage),
+        maxEwa: Math.round(maxEwa),
+        fee: FIXED_EWA_FEE,
+        netReceived: Math.round(netReceived),
+    };
+};
+
+window.LuongNgay = {
+    calculateEwa,
+    formatVnd,
+};
+
 const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -47,11 +75,46 @@ document.querySelectorAll('.nav a').forEach(link => {
     const target = document.querySelector(link.getAttribute('href'));
     if (!target) return;
 
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        lenis.scrollTo(target);
+    });
+
     ScrollTrigger.create({
         trigger: target,
         start: 'top center',
         end: 'bottom center',
         onToggle: self => link.classList.toggle('active', self.isActive)
+    });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target || link.closest('.nav')) return;
+
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        lenis.scrollTo(target);
+    });
+});
+
+document.querySelectorAll('[data-toggle-target]').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const target = document.getElementById(toggle.dataset.toggleTarget);
+        if (!target) return;
+        target.hidden = !target.hidden;
+        if (!target.hidden) {
+            target.querySelector('input')?.focus();
+        }
+    });
+});
+
+document.querySelectorAll('.inline-signup').forEach(form => {
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const success = form.querySelector('.form-success');
+        if (success) success.hidden = false;
+        form.reset();
     });
 });
 
@@ -126,14 +189,6 @@ ScrollTrigger.create({
     end: "bottom 40%",
     onEnter: () => {
         gsap.to('.flash-overlay', { opacity: 1, duration: 0.1 }); // Flash dark
-        // Start counter
-        const counter = document.getElementById('bad-credit-counter');
-        gsap.to(counter, {
-            innerHTML: 50,
-            duration: 2,
-            snap: { innerHTML: 1 },
-            ease: "power2.out"
-        });
         document.querySelector('.vibrating-number').classList.add('vibrating');
     },
     onLeaveBack: () => {
@@ -183,12 +238,41 @@ cards.forEach(card => {
 // Chương 3: Giải pháp (Phone interaction)
 const btn = document.getElementById('withdraw-btn');
 const sweep = document.querySelector('.sweep-light');
+const daysWorkedInput = document.getElementById('days-worked');
+const ewaPercent = document.getElementById('ewa-percent');
+const earnedWage = document.getElementById('earned-wage');
+const maxEwa = document.getElementById('max-ewa');
+const ewaFee = document.getElementById('ewa-fee');
+const netReceived = document.getElementById('net-received');
+const daysWorkedLabel = document.getElementById('days-worked-label');
+const withdrawToast = document.getElementById('withdraw-toast');
+
+const updateEwaMockup = () => {
+    if (!daysWorkedInput) return;
+
+    const result = calculateEwa(daysWorkedInput.value);
+    const earnedPercent = Math.round((result.daysWorked / DAYS_IN_MONTH) * 100);
+
+    if (ewaPercent) ewaPercent.textContent = `${Math.round(MAX_EWA_RATIO * 100)}%`;
+    if (earnedWage) earnedWage.textContent = `Lương tích lũy: ${formatVnd(result.earnedWage)}`;
+    if (maxEwa) maxEwa.textContent = formatVnd(result.maxEwa);
+    if (ewaFee) ewaFee.textContent = formatVnd(result.fee);
+    if (netReceived) netReceived.textContent = formatVnd(result.netReceived);
+    if (daysWorkedLabel) daysWorkedLabel.textContent = `${result.daysWorked} / 30`;
+
+    document.querySelector('.earned-ring')?.style.setProperty(
+        'background',
+        `radial-gradient(circle at center, #0A1220 55%, transparent 56%), conic-gradient(var(--accent-primary) 0 ${earnedPercent}%, rgba(255,255,255,0.08) ${earnedPercent}% 100%)`
+    );
+};
+
+daysWorkedInput?.addEventListener('input', updateEwaMockup);
+updateEwaMockup();
 
 if(btn) {
     btn.addEventListener('click', () => {
-        // Nút đổi trạng thái
         btn.classList.add('success-state');
-        btn.innerText = "Đã giải ngân";
+        if (withdrawToast) withdrawToast.hidden = false;
         document.body.classList.add('disbursement-complete');
         
         // Sweep effect lan toả toàn màn hình
