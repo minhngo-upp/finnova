@@ -90,6 +90,14 @@ includes('id="contact"', 'closing contact section');
 excludes('id="worker-email"', 'closing worker email form');
 excludes('id="factory-name"', 'closing factory company form');
 excludes('class="contact-grid stagger-item"', 'closing dual contact form grid');
+includes('✓ Đã đăng ký! Chúng tôi sẽ liên hệ sớm.', 'hero signup success message');
+includes('✓ Yêu cầu đã gửi! Tiền sẽ về tài khoản trong 5 phút.', 'withdraw success message');
+includes('5 phút giải ngân', 'fast disbursement USP card');
+includes('<div class="avatar-initials">HT</div>', 'worker persona initials');
+includes('<div class="avatar-initials navy-avatar">TL</div>', 'HR persona initials');
+includes('Không tốn một đồng ngân sách nhà máy. F88 chịu toàn bộ chi phí và rủi ro vận hành.', 'factory free benefit copy');
+includes('Benchmark tại Indonesia: turnover giảm 15–25% sau 6 tháng triển khai EWA.', 'factory turnover benchmark copy');
+includes('Hệ thống tích hợp hoàn toàn tự động — nhà máy không cần thay đổi bất kỳ quy trình nội bộ nào.', 'factory process copy');
 includes('* Mục tiêu sau 6 tháng triển khai pilot. Nguồn: GajiGesa Indonesia 2022, McKinsey 2022.', 'impact disclaimer');
 
 includes('Số ngày đã làm trong tháng', 'interactive salary slider label');

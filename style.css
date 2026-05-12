@@ -1077,6 +1077,7 @@ section::before {
     gap: 22px;
     padding: 30px;
     text-align: left;
+    border-left: 4px solid var(--accent-cta);
     border-color: rgba(34, 211, 238, 0.22);
 }
 
@@ -1091,6 +1092,12 @@ section::before {
     border: 1px solid rgba(34, 211, 238, 0.34);
     font-size: 1.6rem;
     font-weight: 900;
+}
+
+.navy-avatar {
+    background: rgba(16, 27, 43, 0.92);
+    color: var(--accent-secondary);
+    border-color: rgba(246, 179, 67, 0.34);
 }
 
 .persona-card h3 {
